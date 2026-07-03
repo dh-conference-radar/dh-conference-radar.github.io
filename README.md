@@ -2,6 +2,10 @@
 
 A small Jekyll/GitHub Pages site for tracking major Digital Humanities conferences and the organizations behind them.
 
+**Live site:** [https://dh-conference-radar.github.io/](https://dh-conference-radar.github.io/)
+
+**Repository description:** A curated, source-linked calendar of major Digital Humanities conferences, with organization details, downloadable calendar files, and quarterly source checks.
+
 The site is deliberately data-first:
 
 - `_data/conferences.yml` contains event facts and confidence/status fields.
