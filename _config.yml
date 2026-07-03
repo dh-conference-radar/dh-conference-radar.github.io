@@ -3,6 +3,18 @@ description: A curated, source-linked calendar of major Digital Humanities confe
 url: "https://dh-conference-radar.github.io"
 baseurl: ""
 timezone: Europe/London
+remote_theme: zerostaticthemes/jekyll-serif-theme
+
+logo:
+  mobile: "/images/logo-mobile.svg"
+  mobile_height: "32px"
+  mobile_width: "32px"
+  desktop: "/images/logo.svg"
+  desktop_height: "32px"
+  desktop_width: "240px"
+
+plugins:
+  - jekyll-remote-theme
 
 collections: {}
 

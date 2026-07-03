@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="32" viewBox="0 0 240 32" role="img" aria-labelledby="title">
+  <title id="title">DH Conference Radar</title>
+  <rect width="32" height="32" rx="16" fill="#2f2f41"/>
+  <text x="16" y="21" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="700" fill="#ffffff">DH</text>
+  <text x="42" y="21" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#2f2f41">Conference Radar</text>
+</svg>

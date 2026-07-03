@@ -7,6 +7,7 @@ The site is deliberately data-first:
 - `_data/conferences.yml` contains event facts and confidence/status fields.
 - `_data/organizations.yml` contains association details.
 - `_data/source_watch.yml` lists official pages to check every three months.
+- The visual presentation uses the remote [Serif Jekyll theme](https://jekyllthemes.io/theme/serif).
 - `calendar/*.ics` contains one downloadable calendar file per confirmed dated conference.
 - `scripts/generate_ics.py` regenerates the calendar downloads from `_data/conferences.yml`.
 - `scripts/update_conferences.py` detects changed official source pages and writes a review report.

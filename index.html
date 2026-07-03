@@ -1,135 +1,120 @@
 ---
-layout: null
+layout: default
+title: "DH Conference Radar"
+description: "A curated, source-linked calendar of major Digital Humanities conferences."
 ---
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ site.title }}</title>
-    <meta name="description" content="{{ site.description }}">
-    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
-  </head>
-  <body>
-    <nav class="site-nav" aria-label="Primary navigation">
-      <div class="wrap nav-inner">
-        <a class="site-mark" href="{{ '/' | relative_url }}">DH Conference Radar</a>
-        <div class="nav-links">
-          <a href="#conferences">Conferences</a>
-          <a href="#organizations">Organizations</a>
-          <a href="#sources">Sources</a>
-        </div>
+
+<div class="intro">
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="col-12 col-md-9 col-lg-7">
+        <h1>DH Conference Radar</h1>
+        <p>A simple calendar of major Digital Humanities conferences, with source links, calendar downloads, and quarterly checks for published changes.</p>
+        <p>Last human verification: <strong>{{ site.data.meta.last_verified }}</strong>.</p>
       </div>
-    </nav>
+    </div>
+  </div>
+</div>
 
-    <header class="site-header">
-      <div class="wrap">
-        <p class="eyebrow">Digital Humanities conference calendar</p>
-        <h1>Where Digital Humanities conferences are happening next.</h1>
-        <p class="lede">A curated, source-linked guide to major global and regional DH meetings, the organizations behind them, and the official pages watched for future changes.</p>
+<div class="strip" id="conferences">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="row justify-content-start mb-3">
+      <div class="col-12 col-md-8">
+        <h2>Upcoming Conferences</h2>
+        <p>Dates are listed only when an official source has published them. Watchlist entries mark important organizations whose next event details still need confirmation.</p>
       </div>
-    </header>
+    </div>
 
-    <main>
-      <section class="intro-band">
-        <div class="wrap intro-grid">
-          <p>Major DH conferences rotate across regions and associations. This site keeps confirmed dates visible while separating them from watchlist entries that still need official announcements.</p>
-          <p class="verification">Last human verification: <strong>{{ site.data.meta.last_verified }}</strong>. Official sources are checked every three months.</p>
-        </div>
-      </section>
-
-      <section class="wrap section" id="conferences">
-        <div class="section-head">
-          <h2>Upcoming Conferences</h2>
-          <p>Dates are included only when an official source has published them.</p>
-        </div>
-
-        <div class="conference-list">
-          {% assign conferences = site.data.conferences | sort: "sort_date" %}
-          {% for event in conferences %}
-          <article class="conference-item">
-            <div class="event-date">
-              <span>{{ event.region }}</span>
-              <strong>
-                {% if event.start_date %}
-                  <time datetime="{{ event.start_date }}">{{ event.display_dates }}</time>
-                {% else %}
-                  TBA
-                {% endif %}
-              </strong>
-            </div>
-            <div class="event-main">
-              <div class="event-title-row">
-                <h3>{{ event.name }}</h3>
-                <span class="status {{ event.status }}">{{ event.status }}</span>
-              </div>
-              <p class="place">{{ event.city }}{% if event.country %}, {{ event.country }}{% endif %}</p>
-              <p>{{ event.summary }}</p>
-              <p class="event-meta"><strong>Organizer:</strong> {{ event.organizer }} · <strong>Format:</strong> {{ event.format }}</p>
-              <div class="links">
-                {% if event.start_date %}
-                <a class="calendar-link" href="{{ '/calendar/' | append: event.id | append: '.ics' | relative_url }}" download>Add to calendar</a>
-                {% endif %}
-                {% if event.website %}
-                <a href="{{ event.website }}">Conference site</a>
-                {% endif %}
-                {% if event.source %}
-                <a href="{{ event.source }}">Source</a>
-                {% endif %}
-              </div>
-            </div>
-          </article>
-          {% endfor %}
-        </div>
-      </section>
-
-      <section class="wrap section" id="organizations">
-        <div class="section-head">
-          <h2>Organizations</h2>
-          <p>Associations are included even when their next conference has not been formally announced.</p>
-        </div>
-        <div class="org-list">
-          {% for org in site.data.organizations %}
-          <article class="org-row">
-            <div>
-              <h3>{{ org.name }}</h3>
-              <p>{{ org.description }}</p>
-            </div>
-            <div class="org-meta">
-              <span>{{ org.scope }}</span>
-              <a href="{{ org.website }}">Website</a>
-            </div>
-          </article>
-          {% endfor %}
-        </div>
-      </section>
-
-      <section class="wrap section" id="sources">
-        <div class="section-head">
-          <h2>Source Watch</h2>
-          <p>These pages are checked quarterly for changed conference information.</p>
-        </div>
-        <div class="watch-table" role="table" aria-label="Watched official sources">
-          <div class="watch-row watch-head" role="row">
-            <span role="columnheader">Source</span>
-            <span role="columnheader">Cadence</span>
-            <span role="columnheader">Use</span>
+    <div class="row justify-content-start">
+      {% assign conferences = site.data.conferences | sort: "sort_date" %}
+      {% for event in conferences %}
+      <div class="col-12 col-md-6 col-lg-4 mb-2">
+        <div class="service service-summary">
+          <div class="service-content">
+            <h2 class="service-title">{{ event.name }}</h2>
+            <p><strong>{% if event.start_date %}{{ event.display_dates }}{% else %}Date to be announced{% endif %}</strong></p>
+            <p>{{ event.city }}{% if event.country %}, {{ event.country }}{% endif %}</p>
+            <p>{{ event.summary }}</p>
+            <p><strong>Organizer:</strong> {{ event.organizer }}</p>
+            <p><strong>Status:</strong> {{ event.status | capitalize }} · <strong>Region:</strong> {{ event.region }}</p>
+            <p>
+              {% if event.start_date %}
+              <a class="button button-primary" href="{{ '/calendar/' | append: event.id | append: '.ics' | relative_url }}" download>Add to calendar</a>
+              {% endif %}
+              {% if event.website %}
+              <a href="{{ event.website }}">Conference site</a>
+              {% endif %}
+              {% if event.source %}
+              · <a href="{{ event.source }}">Source</a>
+              {% endif %}
+            </p>
           </div>
-          {% for source in site.data.source_watch.sources %}
-          <div class="watch-row" role="row">
-            <span role="cell"><a href="{{ source.url }}">{{ source.label }}</a></span>
-            <span role="cell">Quarterly</span>
-            <span role="cell">{{ source.purpose }}</span>
-          </div>
-          {% endfor %}
         </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="wrap">
-        <p>Curated from official association and conference pages. Suggested corrections should cite a public source.</p>
       </div>
-    </footer>
-  </body>
-</html>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="strip strip-grey" id="organizations">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="row justify-content-start mb-3">
+      <div class="col-12 col-md-8">
+        <h2>Organizations</h2>
+        <p>Associations are included even when their next conference has not yet been formally announced.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      {% for org in site.data.organizations %}
+      <div class="col-12 col-md-6 mb-2">
+        <div class="feature">
+          <h2 class="feature-title">{{ org.name }}</h2>
+          <div class="feature-content">
+            <p><strong>{{ org.scope }}</strong></p>
+            <p>{{ org.description }}</p>
+            <p><a href="{{ org.website }}">Website</a></p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="strip" id="about">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="row justify-content-start">
+      <div class="col-12 col-md-8">
+        <h2>About the creator</h2>
+        <p>This website is curated by <strong>Giulia Grisot</strong> as a lightweight public resource for following Digital Humanities conference dates, host organizations, and source updates.</p>
+        <p>The site favours reviewed, source-linked updates over fully automatic scraping, because DH associations publish conference information in different formats and at different rhythms.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="strip strip-grey" id="sources">
+  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
+    <div class="row justify-content-start mb-3">
+      <div class="col-12 col-md-8">
+        <h2>Source Watch</h2>
+        <p>These official pages are checked quarterly for changed conference information.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      {% for source in site.data.source_watch.sources %}
+      <div class="col-12 col-md-6 mb-2">
+        <div class="feature">
+          <h2 class="feature-title"><a href="{{ source.url }}">{{ source.label }}</a></h2>
+          <div class="feature-content">
+            <p>{{ source.purpose }}</p>
+            <p><strong>Cadence:</strong> Quarterly</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

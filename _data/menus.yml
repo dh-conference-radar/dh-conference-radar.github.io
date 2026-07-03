@@ -1,0 +1,24 @@
+main:
+  - name: "Conferences"
+    url: "/#conferences"
+    weight: 1
+  - name: "Organizations"
+    url: "/#organizations"
+    weight: 2
+  - name: "About"
+    url: "/#about"
+    weight: 3
+  - name: "Sources"
+    url: "/#sources"
+    weight: 4
+
+footer:
+  - name: "Home"
+    url: "/"
+    weight: 1
+  - name: "Conferences"
+    url: "/#conferences"
+    weight: 2
+  - name: "Sources"
+    url: "/#sources"
+    weight: 3
