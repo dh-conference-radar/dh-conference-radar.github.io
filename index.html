@@ -11,103 +11,79 @@ layout: null
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
   </head>
   <body>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <div class="wrap nav-inner">
+        <a class="site-mark" href="{{ '/' | relative_url }}">DH Conference Radar</a>
+        <div class="nav-links">
+          <a href="#conferences">Conferences</a>
+          <a href="#organizations">Organizations</a>
+          <a href="#sources">Sources</a>
+        </div>
+      </div>
+    </nav>
+
     <header class="site-header">
-      <div class="wrap header-grid">
-        <div>
-          <p class="eyebrow">Digital Humanities conference calendar</p>
-          <h1>DH Conference Radar</h1>
-          <p class="lede">A source-linked view of major global and regional Digital Humanities meetings, maintained as a small Jekyll site with quarterly source checks.</p>
-        </div>
-        <div class="status-panel" aria-label="Update status">
-          <span class="status-label">Last human verification</span>
-          <strong>{{ site.data.meta.last_verified }}</strong>
-          <span>Official sources are checked every three months by GitHub Actions.</span>
-        </div>
+      <div class="wrap">
+        <p class="eyebrow">Digital Humanities conference calendar</p>
+        <h1>Where Digital Humanities conferences are happening next.</h1>
+        <p class="lede">A curated, source-linked guide to major global and regional DH meetings, the organizations behind them, and the official pages watched for future changes.</p>
       </div>
     </header>
 
     <main>
-      <section class="band">
-        <div class="wrap tools" aria-label="Conference filters">
-          <label>
-            <span>Search</span>
-            <input id="searchBox" type="search" placeholder="Name, city, association, method...">
-          </label>
-          <label>
-            <span>Region</span>
-            <select id="regionFilter">
-              <option value="">All regions</option>
-              <option value="Global">Global</option>
-              <option value="Europe">Europe</option>
-              <option value="Americas">Americas</option>
-              <option value="Asia">Asia</option>
-              <option value="Africa">Africa</option>
-              <option value="Methods">Methods</option>
-            </select>
-          </label>
-          <label>
-            <span>Status</span>
-            <select id="statusFilter">
-              <option value="">All statuses</option>
-              <option value="confirmed">Confirmed</option>
-              <option value="watch">Watchlist</option>
-            </select>
-          </label>
+      <section class="intro-band">
+        <div class="wrap intro-grid">
+          <p>Major DH conferences rotate across regions and associations. This site keeps confirmed dates visible while separating them from watchlist entries that still need official announcements.</p>
+          <p class="verification">Last human verification: <strong>{{ site.data.meta.last_verified }}</strong>. Official sources are checked every three months.</p>
         </div>
       </section>
 
-      <section class="wrap section">
+      <section class="wrap section" id="conferences">
         <div class="section-head">
           <h2>Upcoming Conferences</h2>
           <p>Dates are included only when an official source has published them.</p>
         </div>
 
-        <div class="conference-grid" id="conferenceGrid">
+        <div class="conference-list">
           {% assign conferences = site.data.conferences | sort: "sort_date" %}
           {% for event in conferences %}
-          <article class="conference-card" data-region="{{ event.region }}" data-status="{{ event.status }}" data-search="{{ event.name | downcase }} {{ event.organizer | downcase }} {{ event.city | downcase }} {{ event.country | downcase }} {{ event.tags | join: ' ' | downcase }} {{ event.summary | downcase }}">
-            <div class="card-topline">
-              <span class="pill">{{ event.region }}</span>
-              <span class="status {{ event.status }}">{{ event.status }}</span>
+          <article class="conference-item">
+            <div class="event-date">
+              <span>{{ event.region }}</span>
+              <strong>
+                {% if event.start_date %}
+                  <time datetime="{{ event.start_date }}">{{ event.display_dates }}</time>
+                {% else %}
+                  TBA
+                {% endif %}
+              </strong>
             </div>
-            <h3>{{ event.name }}</h3>
-            <p class="date-line">
-              {% if event.start_date %}
-                <time datetime="{{ event.start_date }}">{{ event.display_dates }}</time>
-              {% else %}
-                Date to be announced
-              {% endif %}
-            </p>
-            <p class="place">{{ event.city }}{% if event.country %}, {{ event.country }}{% endif %}</p>
-            <p>{{ event.summary }}</p>
-            <dl>
-              <div>
-                <dt>Organizer</dt>
-                <dd>{{ event.organizer }}</dd>
+            <div class="event-main">
+              <div class="event-title-row">
+                <h3>{{ event.name }}</h3>
+                <span class="status {{ event.status }}">{{ event.status }}</span>
               </div>
-              <div>
-                <dt>Format</dt>
-                <dd>{{ event.format }}</dd>
+              <p class="place">{{ event.city }}{% if event.country %}, {{ event.country }}{% endif %}</p>
+              <p>{{ event.summary }}</p>
+              <p class="event-meta"><strong>Organizer:</strong> {{ event.organizer }} · <strong>Format:</strong> {{ event.format }}</p>
+              <div class="links">
+                {% if event.start_date %}
+                <a class="calendar-link" href="{{ '/calendar/' | append: event.id | append: '.ics' | relative_url }}" download>Add to calendar</a>
+                {% endif %}
+                {% if event.website %}
+                <a href="{{ event.website }}">Conference site</a>
+                {% endif %}
+                {% if event.source %}
+                <a href="{{ event.source }}">Source</a>
+                {% endif %}
               </div>
-            </dl>
-            <div class="links">
-              {% if event.start_date %}
-              <a class="calendar-link" href="{{ '/calendar/' | append: event.id | append: '.ics' | relative_url }}" download>Add to calendar</a>
-              {% endif %}
-              {% if event.website %}
-              <a href="{{ event.website }}">Conference site</a>
-              {% endif %}
-              {% if event.source %}
-              <a href="{{ event.source }}">Source</a>
-              {% endif %}
             </div>
           </article>
           {% endfor %}
         </div>
-        <p class="empty" id="emptyState" hidden>No conferences match those filters.</p>
       </section>
 
-      <section class="wrap section">
+      <section class="wrap section" id="organizations">
         <div class="section-head">
           <h2>Organizations</h2>
           <p>Associations are included even when their next conference has not been formally announced.</p>
@@ -128,7 +104,7 @@ layout: null
         </div>
       </section>
 
-      <section class="wrap section">
+      <section class="wrap section" id="sources">
         <div class="section-head">
           <h2>Source Watch</h2>
           <p>These pages are checked quarterly for changed conference information.</p>
@@ -155,6 +131,5 @@ layout: null
         <p>Curated from official association and conference pages. Suggested corrections should cite a public source.</p>
       </div>
     </footer>
-    <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
   </body>
 </html>
