@@ -32,6 +32,8 @@ jobs:
         uses: actions/configure-pages@v5
         with:
           enablement: true
+      - name: Generate calendar files
+        run: python3 scripts/generate_ics.py
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
