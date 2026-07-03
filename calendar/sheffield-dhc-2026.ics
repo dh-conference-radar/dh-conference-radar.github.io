@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DH Conference Radar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:sheffield-dhc-2026@dh-conference-radar
+DTSTAMP:20260703T000000Z
+DTSTART;VALUE=DATE:20260902
+DTEND;VALUE=DATE:20260904
+SUMMARY:Digital Humanities Congress 2026
+LOCATION:Sheffield\, United Kingdom
+DESCRIPTION:A biennial congress in Sheffield for sharing knowledge\, ideas\
+ , and techniques within digital humanities\, held at The Edge at the Unive
+ rsity of Sheffield.\n\nOrganizer: Digital Humanities Institute\, Universit
+ y of Sheffield\n\nSource: https://www.dhi.ac.uk/congress\n\nWebsite: https
+ ://www.dhi.ac.uk/congress
+URL:https://www.dhi.ac.uk/congress
+END:VEVENT
+END:VCALENDAR

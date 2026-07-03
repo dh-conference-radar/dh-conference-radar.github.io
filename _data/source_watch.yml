@@ -34,6 +34,13 @@ sources:
     selector_hint: "DHd-Konferenzen"
     last_hash: ""
 
+  - id: sheffield-dhc
+    label: "Sheffield Digital Humanities Congress"
+    url: "https://www.dhi.ac.uk/congress"
+    purpose: "Digital Humanities Congress dates, programme, registration, and venue updates"
+    selector_hint: "DHC2026"
+    last_hash: ""
+
   - id: chr-conference
     label: "CHR conference page"
     url: "https://computational-humanities-research.org/conference/"

@@ -49,6 +49,23 @@
   tags: ["jadh", "japan", "kyushu", "asia"]
   summary: "The 15th annual JADH conference, hosted at Kyushu University under the theme Whose World, Whose Data?"
 
+- id: sheffield-dhc-2026
+  name: "Digital Humanities Congress 2026"
+  organizer: "Digital Humanities Institute, University of Sheffield"
+  region: "Europe"
+  city: "Sheffield"
+  country: "United Kingdom"
+  start_date: "2026-09-02"
+  end_date: "2026-09-03"
+  sort_date: "2026-09-02"
+  display_dates: "2-3 September 2026"
+  status: "confirmed"
+  format: "Physical conference only"
+  website: "https://www.dhi.ac.uk/congress"
+  source: "https://www.dhi.ac.uk/congress"
+  tags: ["sheffield", "dhi", "digital humanities congress", "university of sheffield", "europe"]
+  summary: "A biennial congress in Sheffield for sharing knowledge, ideas, and techniques within digital humanities, held at The Edge at the University of Sheffield."
+
 - id: chr-2027
   name: "Computational Humanities Research 2027"
   organizer: "Computational Humanities Research community"
