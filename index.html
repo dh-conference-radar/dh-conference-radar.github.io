@@ -20,8 +20,8 @@ description: "A curated, source-linked calendar of major Digital Humanities conf
   <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
     <div class="row justify-content-start mb-3">
       <div class="col-12 col-md-8">
-        <h2>Upcoming Conferences</h2>
-        <p>Dates are listed only when an official source has published them. Watchlist entries mark important organizations whose next event details still need confirmation.</p>
+        <h2>Conference Calendar</h2>
+        <p>Dates are listed only when an official source has published them. Recent events remain visible for reference, while watchlist entries mark important organizations whose next event details still need confirmation.</p>
       </div>
     </div>
 
@@ -32,7 +32,7 @@ description: "A curated, source-linked calendar of major Digital Humanities conf
         <div class="service service-summary">
           <div class="service-content">
             <h2 class="service-title">{{ event.name }}</h2>
-            <p><strong>{% if event.start_date %}{{ event.display_dates }}{% else %}Date to be announced{% endif %}</strong></p>
+            <p><strong>{% if event.display_dates %}{{ event.display_dates }}{% else %}Date to be announced{% endif %}</strong></p>
             <p>{{ event.city }}{% if event.country %}, {{ event.country }}{% endif %}</p>
             <p>{{ event.summary }}</p>
             <p><strong>Organizer:</strong> {{ event.organizer }}</p>

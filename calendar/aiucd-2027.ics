@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DH Conference Radar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:aiucd-2027@dh-conference-radar
+DTSTAMP:20260703T000000Z
+DTSTART;VALUE=DATE:20270608
+DTEND;VALUE=DATE:20270611
+SUMMARY:AIUCD 2027
+LOCATION:Salerno/Fisciano and Naples\, Italy
+DESCRIPTION:AIUCD's annual conference\, held between the Fisciano campus ne
+ ar Salerno and the University of Campania Luigi Vanvitelli in Naples.\n\nO
+ rganizer: Associazione Informatica Umanistica e Cultura Digitale\n\nSource
+ : https://www.aiucd.it/aiucd-2027-la-conferenza-si-terra-a-salerno-e-napol
+ i-dall8-al-10-giugno/\n\nWebsite: https://www.aiucd.it/aiucd-2027-la-confe
+ renza-si-terra-a-salerno-e-napoli-dall8-al-10-giugno/
+URL:https://www.aiucd.it/aiucd-2027-la-conferenza-si-terra-a-salerno-e-napo
+ li-dall8-al-10-giugno/
+END:VEVENT
+END:VCALENDAR

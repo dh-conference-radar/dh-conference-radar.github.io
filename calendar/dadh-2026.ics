@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DH Conference Radar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:dadh-2026@dh-conference-radar
+DTSTAMP:20260703T000000Z
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261102
+SUMMARY:DADH 2026
+LOCATION:Kaohsiung\, Taiwan
+DESCRIPTION:The 17th International Conference of Digital Archives and Digit
+ al Humanities\, hosted at National Sun Yat-sen University under a theme ex
+ amining knowledge\, creativity\, methods\, and responsibility in the age o
+ f AI.\n\nOrganizer: Taiwanese Association for Digital Humanities and Natio
+ nal Sun Yat-sen University\n\nSource: https://tadh.org.tw/en/2026/07/30/da
+ dh-2026-call-for-paper-%E5%BB%B6%E6%9C%9F%E8%87%B38%E6%9C%8810%E6%97%A5%EF
+ %BC%8C%E6%AD%A1%E8%BF%8E%E6%8A%95%E7%A8%BF%EF%BC%81/\n\nWebsite: https://s
+ ites.google.com/view/2026dadh/
+URL:https://sites.google.com/view/2026dadh/
+END:VEVENT
+END:VCALENDAR

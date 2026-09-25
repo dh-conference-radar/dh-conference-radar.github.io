@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DH Conference Radar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:hkadh-2027@dh-conference-radar
+DTSTAMP:20260703T000000Z
+DTSTART;VALUE=DATE:20270121
+DTEND;VALUE=DATE:20270125
+SUMMARY:HKADH 2027
+LOCATION:Hong Kong
+DESCRIPTION:The third annual HKADH conference\, hosted by the Education Uni
+ versity of Hong Kong under the theme Model/Making: Toward Generative Human
+ ities.\n\nOrganizer: Hong Kong Association for Digital Humanities\n\nSourc
+ e: https://2027.hkadh.org/\n\nWebsite: https://2027.hkadh.org/
+URL:https://2027.hkadh.org/
+END:VEVENT
+END:VCALENDAR

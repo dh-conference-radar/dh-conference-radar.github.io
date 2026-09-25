@@ -10,10 +10,10 @@ DTSTART;VALUE=DATE:20270628
 DTEND;VALUE=DATE:20270704
 SUMMARY:ADHO Digital Humanities 2027
 LOCATION:Galway\, Ireland
-DESCRIPTION:The 2027 edition of ADHO's flagship international Digital Human
- ities conference\, announced for the University of Galway.\n\nOrganizer: A
- lliance of Digital Humanities Organizations\n\nSource: https://adho.org/co
- nference/\n\nWebsite: https://adho.org/conference/
-URL:https://adho.org/conference/
+DESCRIPTION:ADHO's flagship international Digital Humanities conference\, h
+ osted by the University of Galway under the theme Creativity.\n\nOrganizer
+ : Alliance of Digital Humanities Organizations\n\nSource: https://adho.org
+ /conference/\n\nWebsite: https://dh2027.adho.org/
+URL:https://dh2027.adho.org/
 END:VEVENT
 END:VCALENDAR

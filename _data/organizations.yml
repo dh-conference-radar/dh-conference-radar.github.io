@@ -45,3 +45,15 @@
   scope: "Methods-forward international"
   website: "https://computational-humanities-research.org/"
   description: "An international community for computational, quantitative, formal, and statistical humanities research."
+
+- id: hkadh
+  name: "Hong Kong Association for Digital Humanities (HKADH)"
+  scope: "Hong Kong and Asia"
+  website: "https://hkadh.org/"
+  description: "Supports digital humanities research, teaching, creative practice, and scholarly exchange in Hong Kong and the wider region."
+
+- id: tadh
+  name: "Taiwanese Association for Digital Humanities (TADH)"
+  scope: "Taiwan and Asia"
+  website: "https://tadh.org.tw/en/"
+  description: "Organizes the annual International Conference of Digital Archives and Digital Humanities and supports DH scholarship in Taiwan."

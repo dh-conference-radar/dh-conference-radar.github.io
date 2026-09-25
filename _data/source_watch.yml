@@ -68,3 +68,17 @@ sources:
     purpose: "AIUCD annual conference announcements"
     selector_hint: "news posts"
     last_hash: ""
+
+  - id: hkadh-home
+    label: "HKADH official site"
+    url: "https://hkadh.org/"
+    purpose: "HKADH annual conference announcements"
+    selector_hint: "conference announcements"
+    last_hash: ""
+
+  - id: tadh-home
+    label: "TADH official site"
+    url: "https://tadh.org.tw/en/"
+    purpose: "DADH annual conference calls and date announcements"
+    selector_hint: "DADH announcements"
+    last_hash: ""

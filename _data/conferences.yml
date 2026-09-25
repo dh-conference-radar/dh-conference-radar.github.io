@@ -66,6 +66,23 @@
   tags: ["sheffield", "dhi", "digital humanities congress", "university of sheffield", "europe"]
   summary: "A biennial congress in Sheffield for sharing knowledge, ideas, and techniques within digital humanities, held at The Edge at the University of Sheffield."
 
+- id: dadh-2026
+  name: "DADH 2026"
+  organizer: "Taiwanese Association for Digital Humanities and National Sun Yat-sen University"
+  region: "Asia"
+  city: "Kaohsiung"
+  country: "Taiwan"
+  start_date: "2026-10-31"
+  end_date: "2026-11-01"
+  sort_date: "2026-10-31"
+  display_dates: "31 October-1 November 2026"
+  status: "confirmed"
+  format: "In person"
+  website: "https://sites.google.com/view/2026dadh/"
+  source: "https://tadh.org.tw/en/2026/07/30/dadh-2026-call-for-paper-%E5%BB%B6%E6%9C%9F%E8%87%B38%E6%9C%8810%E6%97%A5%EF%BC%8C%E6%AD%A1%E8%BF%8E%E6%8A%95%E7%A8%BF%EF%BC%81/"
+  tags: ["dadh", "tadh", "taiwan", "digital archives", "asia"]
+  summary: "The 17th International Conference of Digital Archives and Digital Humanities, hosted at National Sun Yat-sen University under a theme examining knowledge, creativity, methods, and responsibility in the age of AI."
+
 - id: chr-2027
   name: "Computational Humanities Research 2027"
   organizer: "Computational Humanities Research community"
@@ -82,6 +99,23 @@
   source: "https://computational-humanities-research.org/conference/"
   tags: ["chr", "methods", "computational humanities", "quantitative"]
   summary: "A methods-forward conference for explicit formal, statistical, computational, and mathematical approaches to humanities questions."
+
+- id: hkadh-2027
+  name: "HKADH 2027"
+  organizer: "Hong Kong Association for Digital Humanities"
+  region: "Asia"
+  city: "Hong Kong"
+  country: ""
+  start_date: "2027-01-21"
+  end_date: "2027-01-24"
+  sort_date: "2027-01-21"
+  display_dates: "21-24 January 2027"
+  status: "confirmed"
+  format: "In person"
+  website: "https://2027.hkadh.org/"
+  source: "https://2027.hkadh.org/"
+  tags: ["hkadh", "hong kong", "asia", "generative humanities", "digital humanities"]
+  summary: "The third annual HKADH conference, hosted by the Education University of Hong Kong under the theme Model/Making: Toward Generative Humanities."
 
 - id: dhd-2027
   name: "DHd2027"
@@ -100,6 +134,23 @@
   tags: ["dhd", "german-speaking", "marburg", "europe"]
   summary: "The annual DHd meeting for the German-speaking DH community, hosted by the University of Marburg under the theme Mind the Gap."
 
+- id: aiucd-2027
+  name: "AIUCD 2027"
+  organizer: "Associazione Informatica Umanistica e Cultura Digitale"
+  region: "Europe"
+  city: "Salerno/Fisciano and Naples"
+  country: "Italy"
+  start_date: "2027-06-08"
+  end_date: "2027-06-10"
+  sort_date: "2027-06-08"
+  display_dates: "8-10 June 2027"
+  status: "confirmed"
+  format: "In person"
+  website: "https://www.aiucd.it/aiucd-2027-la-conferenza-si-terra-a-salerno-e-napoli-dall8-al-10-giugno/"
+  source: "https://www.aiucd.it/aiucd-2027-la-conferenza-si-terra-a-salerno-e-napoli-dall8-al-10-giugno/"
+  tags: ["aiucd", "italy", "salerno", "naples", "europe"]
+  summary: "AIUCD's annual conference, held between the Fisciano campus near Salerno and the University of Campania Luigi Vanvitelli in Naples."
+
 - id: adho-dh2027
   name: "ADHO Digital Humanities 2027"
   organizer: "Alliance of Digital Humanities Organizations"
@@ -112,10 +163,10 @@
   display_dates: "28 June-3 July 2027"
   status: "confirmed"
   format: "To be confirmed"
-  website: "https://adho.org/conference/"
+  website: "https://dh2027.adho.org/"
   source: "https://adho.org/conference/"
   tags: ["adho", "global", "ireland", "galway"]
-  summary: "The 2027 edition of ADHO's flagship international Digital Humanities conference, announced for the University of Galway."
+  summary: "ADHO's flagship international Digital Humanities conference, hosted by the University of Galway under the theme Creativity."
 
 - id: adho-dh2028
   name: "ADHO Digital Humanities 2028"
@@ -133,6 +184,23 @@
   source: "https://adho.org/conference/"
   tags: ["adho", "global", "africa", "sadilar"]
   summary: "The 2028 edition of ADHO's flagship international conference, announced for Cape Town with SADiLaR."
+
+- id: adho-dh2029
+  name: "ADHO Digital Humanities 2029"
+  organizer: "Alliance of Digital Humanities Organizations"
+  region: "Global"
+  city: "Padua"
+  country: "Italy"
+  start_date:
+  end_date:
+  sort_date: "2029-07-01"
+  display_dates: "July 2029 (exact dates TBA)"
+  status: "announced"
+  format: "To be confirmed"
+  website: "https://adho.org/conference/"
+  source: "https://adho.org/conference/"
+  tags: ["adho", "global", "italy", "padua"]
+  summary: "The 2029 edition of ADHO's flagship international Digital Humanities conference, announced for Padua; exact July dates are still to be published."
 
 - id: ach-next
   name: "ACH next conference or virtual event"
@@ -167,20 +235,3 @@
   source: "https://www.humanisti.ca/"
   tags: ["humanistica", "francophone", "digital humanities"]
   summary: "The francophone DH association should be tracked for annual conference announcements and calls."
-
-- id: aiucd-next
-  name: "AIUCD next annual conference"
-  organizer: "Associazione Informatica Umanistica e Cultura Digitale"
-  region: "Europe"
-  city: "TBA"
-  country: "Italy"
-  start_date:
-  end_date:
-  sort_date: "9999-01-03"
-  display_dates: "TBA"
-  status: "watch"
-  format: "TBA"
-  website: "https://www.aiucd.it/"
-  source: "https://www.aiucd.it/"
-  tags: ["aiucd", "italy", "digital humanities"]
-  summary: "AIUCD is the Italian DH association and a major European DH hub; the next annual conference needs source confirmation."
